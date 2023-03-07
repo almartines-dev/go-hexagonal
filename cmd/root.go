@@ -18,10 +18,10 @@ package cmd
 import (
 	"database/sql"
 	"fmt"
-	"github.com/codeedu/go-hexagonal/application"
-	"os"
+	dbInfra "github.com/almartines-dev/go-hexagonal/adapters/db"
+	"github.com/almartines-dev/go-hexagonal/application"
 	"github.com/spf13/cobra"
-	dbInfra "github.com/codeedu/go-hexagonal/adapters/db"
+	"os"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
@@ -29,7 +29,7 @@ import (
 
 var cfgFile string
 
-var db, _ = sql.Open("sqlite3","db.sqlite")
+var db, _ = sql.Open("sqlite3", "db.sqlite")
 var productDb = dbInfra.NewProductDb(db)
 var productService = application.ProductService{Persistence: productDb}
 

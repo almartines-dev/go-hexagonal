@@ -1,4 +1,4 @@
-module github.com/codeedu/go-hexagonal
+module github.com/almartines-dev/go-hexagonal
 
 go 1.16
 

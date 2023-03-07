@@ -2,8 +2,8 @@ package cli_test
 
 import (
 	"fmt"
-	"github.com/codeedu/go-hexagonal/adapters/cli"
-	mock_application "github.com/codeedu/go-hexagonal/application/mocks"
+	"github.com/almartines-dev/go-hexagonal/adapters/cli"
+	mock_application "github.com/almartines-dev/go-hexagonal/application/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 	"testing"
